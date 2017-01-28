@@ -1,5 +1,5 @@
 html {
-  background:#018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
+  background:#018DED url(http://unsplash.it/1500/1000/?random);
   background-size:cover;
   font-family:'helvetica neue';
   text-align: center;
@@ -17,7 +17,7 @@ body {
 .clock {
   width: 30rem;
   height: 30rem;
-  border:20px solid white;
+  border:20px solid gray;
   border-radius:50%;
   margin:50px auto;
   position: relative;
@@ -42,4 +42,19 @@ body {
   background:black;
   position: absolute;
   top:50%;
+  /*moves starting point of line to right most point*/
+  transform-origin: 100%;
+  /*moves the line to vertical starting*/
+  transform: rotate(90deg);
+  /*transitions time of the ticks*/
+  transition: all 0.05s;
+  /*effect on the tick */
+  transition-timing-function:ease-in-out;
+}
+
+.second-hand{
+  height: 2px;
+}
+.hour-hand{
+  width: 49%;
 }
